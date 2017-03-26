@@ -12,7 +12,7 @@ using Microsoft.Bot.Connector;
 
 public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info($"Hello there!");
+    log.Info($"Webhook was triggered!");
 
     // Initialize the azure bot
     using (BotService.Initialize())
@@ -45,7 +45,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                         var newMembers = update.MembersAdded?.Where(t => t.Id != activity.Recipient.Id);
                         foreach (var newMember in newMembers)
                         {
-                            reply.Text = "Welcome";
+                            reply.Text = "Welcome fuck you";
                             if (!string.IsNullOrEmpty(newMember.Name))
                             {
                                 reply.Text += $" {newMember.Name}";
@@ -57,10 +57,10 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                     break;
                 case ActivityTypes.ContactRelationUpdate:
                 case ActivityTypes.Typing:
-                    log.Info($"WADSADDAS");
-                    break;
                 case ActivityTypes.DeleteUserData:
                 case ActivityTypes.Ping:
+                    log.Info($"WADSADDAS");
+                    break;
                 default:
                     log.Error($"Unknown activity type ignored: {activity.GetActivityType()}");
                     break;
