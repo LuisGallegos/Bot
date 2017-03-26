@@ -57,10 +57,11 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                     break;
                 case ActivityTypes.ContactRelationUpdate:
                 case ActivityTypes.Typing:
+                    log.Error("WADSADDAS");
                 case ActivityTypes.DeleteUserData:
                 case ActivityTypes.Ping:
                 default:
-                    //log.Error($"Unknown activity type ignored: {activity.GetActivityType()}");
+                    log.Error($"Unknown activity type ignored: {activity.GetActivityType()}");
                     break;
             }
         }
