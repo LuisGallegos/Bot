@@ -12,7 +12,7 @@ using Microsoft.Bot.Connector;
 
 public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 {
-    log.Info($"Webhook was triggered!");
+    log.Info($"Hello there!");
 
     // Initialize the azure bot
     using (BotService.Initialize())
@@ -57,7 +57,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                     break;
                 case ActivityTypes.ContactRelationUpdate:
                 case ActivityTypes.Typing:
-                    log.Error("WADSADDAS");
+                    log.Info($"WADSADDAS");
                 case ActivityTypes.DeleteUserData:
                 case ActivityTypes.Ping:
                 default:
