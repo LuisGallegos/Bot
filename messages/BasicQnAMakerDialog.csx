@@ -13,4 +13,4 @@ public class BasicQnAMakerDialog : QnAMakerDialog
     public BasicQnAMakerDialog() : base(new QnAMakerService(new QnAMakerAttribute(Utils.GetAppSetting("810fbe2afab14f299a0b6874ff217cea"), Utils.GetAppSetting("d1cf5bc3-f072-496e-bac3-da49afd29ef5"),"No good answer",0.5)))
     {
     }
-}
+}   
