@@ -58,6 +58,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
                 case ActivityTypes.ContactRelationUpdate:
                 case ActivityTypes.Typing:
                     log.Info($"WADSADDAS");
+                    break;
                 case ActivityTypes.DeleteUserData:
                 case ActivityTypes.Ping:
                 default:
