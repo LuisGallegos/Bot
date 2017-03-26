@@ -10,7 +10,7 @@ using Microsoft.Bot.Builder.CognitiveServices.QnAMaker;
 public class BasicQnAMakerDialog : QnAMakerDialog
 {
     // Go to https://qnamaker.ai and feed data, train & publish your QnA Knowledgebase.
-    public BasicQnAMakerDialog() : base(new QnAMakerService(new QnAMakerAttribute(Utils.GetAppSetting("QnASubscriptionKey"), Utils.GetAppSetting("QnAKnowledgebaseId"))))
+    public BasicQnAMakerDialog() : base(new QnAMakerService(new QnAMakerAttribute(Utils.GetAppSetting("810fbe2afab14f299a0b6874ff217cea"), Utils.GetAppSetting("810fbe2afab14f299a0b6874ff217cea"))))
     {
     }
 }
